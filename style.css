@@ -1,0 +1,126 @@
+* {
+  margin: 0 auto;
+  padding: 0;
+}
+.text_h1{
+  font-size: 38px;
+    color: darkcyan;
+    font-family: fantasy;
+    padding: 13px;
+    background-color: black;
+    width: 40%;
+    border-radius: 34px;
+    margin-top: 34px;
+    margin-bottom: 32px;
+    background-image: linear-gradient(43deg, #443ea1fc, #ad1414f5);
+    border: 1px solid green;
+}
+
+.win_msg{
+  font-style: italic;
+    font-family: fantasy;
+    color: chartreuse;
+    transition: transform 0.2s ease-in-out;
+}
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(background.png) no-repeat center center / cover;
+  filter: blur(10px);
+  z-index: 0;
+}
+
+.section > * {
+  position: relative;
+  z-index: 1; /* Keeps your content above the blurred background */
+}
+
+.re-set,
+.new_game {
+  background-image: linear-gradient(82deg, #1cb5e0 0%, #000851 100%);
+  padding: 16px;
+  color: white;
+  font-size: 20px;
+  margin-top: 36px;
+  border: none;
+  border-radius: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+.re-set:hover,.new_game:hover {
+  transform: scale(1.05);
+}
+
+.main {
+  color: white;
+  height: 700px;
+  width: 100%;
+}
+
+.game_box {
+  height: 441px;
+  width: 473px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 14px;
+  justify-items: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 15px;
+}
+.hidden {
+  display: none;
+}
+
+.box {
+  width: 130px;
+  height: 130px;
+  background: linear-gradient(135deg, #1e1e2f, #3a3a60);
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+.box:hover {
+  transform: scale(1.05);
+}
+
+.box.X {
+  color: #ff6b6b;
+  text-shadow: 0 0 5px #ff6b6b, 0 0 10px #ff3b3b;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.box.O {
+  color: #4fc3f7;
+  text-shadow: 0 0 5px #4fc3f7, 0 0 10px #0288d1;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.Gar-color {
+  background-image: linear-gradient(77deg, #fc466b 0% 0%, #3f5efb 78%);
+  color: #fc466b;
+}
+
+.wins {
+  color: #0288d1;
+}
+
+.win_box {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
